@@ -39,3 +39,5 @@ Map.defaultProps = {
   zoom:6
 }
 export default Map
+
+// https://stackoverflow.com/questions/55028583/how-do-i-call-setstate-from-another-component-in-reactjs

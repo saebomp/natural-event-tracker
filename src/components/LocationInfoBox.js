@@ -1,6 +1,7 @@
-import React from 'react'
+import {useState} from 'react'
 
 const LocationInfoBox = ({info}) => {
+
   return (
     <div className="location-info">
       <h2>Event Location Info</h2>
@@ -8,6 +9,7 @@ const LocationInfoBox = ({info}) => {
         <li>ID : {info.id}</li>
         <li>TITLE : {info.title}</li>
       </ul>
+      {/* <p className="closeBtn">X</p> */}
     </div>
   )
 }
