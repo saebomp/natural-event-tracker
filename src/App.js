@@ -2,9 +2,25 @@ import { useState, useEffect } from 'react';
 import Map from './components/Maps'
 import Header from './components/Header'
 
+import { makeStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    position:'absolute',
+    top:'50%',
+    left:'50%',
+    zIndex:100,
+    transform:'translate(-50%,-50%)'
+  },
+}));
+
+
 function App() {
   const [eventData, setEventData] = useState([])
   const [loading, setLoading] = useState(false)
+
+  const classes = useStyles();
 
   useEffect(()=> {
     const fetchEvents = async () => {
@@ -21,7 +37,12 @@ function App() {
   return (
     <div>
       <Header />
-      {!loading ? <Map eventData={eventData} /> : <h1>Loading...</h1>}
+      {!loading ? <Map eventData={eventData} /> : 
+      <h1>
+        <div className={classes.root}>
+          <CircularProgress color="secondary"  />
+          </div>
+      </h1>}
     </div>
   );
 }
