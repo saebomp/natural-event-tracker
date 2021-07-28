@@ -27,8 +27,19 @@ body {
 }
 .location-icon {
   font-size: 2rem;
-  color:red;
   cursor: pointer;
+}
+
+.location-icon.storm {
+  color:white
+}
+
+.location-icon.fire {
+  color:red;
+}
+
+.location-icon.ice {
+  color:cyan;
 }
 
 .location-info {

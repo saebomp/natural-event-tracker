@@ -11,6 +11,23 @@ const Map = ({eventData, center, zoom}) => {
       return <LocationMarker
         lat={ev.geometries[0].coordinates[1]}
         lng={ev.geometries[0].coordinates[0]}
+        id={ev.categories[0].id}
+        onClick={()=> setLocationInfo({id:ev.id, title:ev.title})}
+      />
+    }
+    else if(ev.categories[0].id === 10) {
+      return <LocationMarker
+        lat={ev.geometries[0].coordinates[1]}
+        lng={ev.geometries[0].coordinates[0]}
+        id={ev.categories[0].id}
+        onClick={()=> setLocationInfo({id:ev.id, title:ev.title})}
+      />
+    }
+    else if(ev.categories[0].id === 15) {
+      return <LocationMarker
+        lat={ev.geometries[0].coordinates[1]}
+        lng={ev.geometries[0].coordinates[0]}
+        id={ev.categories[0].id}
         onClick={()=> setLocationInfo({id:ev.id, title:ev.title})}
       />
     }

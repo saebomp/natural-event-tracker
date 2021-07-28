@@ -49,9 +49,11 @@ function App() {
 
 export default App;
 
-// 29:35
-// https://www.youtube.com/watch?v=ontX4zfVqK8
 // AIzaSyDneP7oCKWNUEjS7CEc2WDEYF77nOm1Oxg      //googlemap api key
 // https://eonet.sci.gsfc.nasa.gov/api/v2.1/events
-//loading 될때 이미지 material ui에서 넣을것
-// location info box 에서 x 누르면 locationInfo를 false로 바꿀것
+// https://iconify.design/icon-sets/    //icons
+// https://iconify.design/icon-sets/mdi/
+// https://api.nasa.gov/
+
+// reference
+// https://www.youtube.com/watch?v=ontX4zfVqK8
