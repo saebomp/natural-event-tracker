@@ -53,7 +53,8 @@ export default App;
 // https://eonet.sci.gsfc.nasa.gov/api/v2.1/events
 // https://iconify.design/icon-sets/    //icons
 // https://iconify.design/icon-sets/mdi/
-// https://api.nasa.gov/
 
 // reference
+// https://api.nasa.gov/
 // https://www.youtube.com/watch?v=ontX4zfVqK8
+// https://css-tricks.com/how-to-create-a-notebook-design-with-css/
