@@ -9,6 +9,6 @@ npm start
 ## Status
 Project is in progress
 ## Inspiration
-https://www.youtube.com/watch?v=ontX4zfVqK8
-https://css-tricks.com/how-to-create-a-notebook-design-with-css/
+https://www.youtube.com/watch?v=ontX4zfVqK8<br />
+https://css-tricks.com/how-to-create-a-notebook-design-with-css/<br />
 https://api.nasa.gov/
