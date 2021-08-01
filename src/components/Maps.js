@@ -5,7 +5,8 @@ import LocationInfoBox from './LocationInfoBox'
 
 const Map = ({eventData, center, zoom}) => {
   const [locationInfo, setLocationInfo] = useState(null)
-  console.log('eventDataaaaaa', eventData)
+  // console.log('eventData', eventData)
+  
   const markers = eventData.map(ev => {
     if(ev.categories[0].id === 8) {
       return <LocationMarker
@@ -36,11 +37,13 @@ const Map = ({eventData, center, zoom}) => {
     setLocationInfo(null)
   }
   //LocationInfoBox에서 closeBox 펑션을 받아와서 locationInfo값을 null만듦 
+  
+  const API_KEY = process.env.REACT_APP_GOOGLEMAPS_API_KEY;
 
   return (
     <div className="map">
       <GoogleMapReact
-        bootstrapURLKeys={{key:'AIzaSyDneP7oCKWNUEjS7CEc2WDEYF77nOm1Oxg'}}
+        bootstrapURLKeys={{key:`${API_KEY}`}}
         defaultCenter={center}
         defaultZoom={zoom}
       >

@@ -49,7 +49,7 @@ function App() {
 
 export default App;
 
-// AIzaSyDneP7oCKWNUEjS7CEc2WDEYF77nOm1Oxg      //googlemap api key
+
 // https://eonet.sci.gsfc.nasa.gov/api/v2.1/events
 // https://iconify.design/icon-sets/    //icons
 // https://iconify.design/icon-sets/mdi/
