@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react'
 import LocationMarker from './LocationMarker'
 import LocationInfoBox from './LocationInfoBox'
 
-const Map = ({eventData, center, zoom}) => {
+const Map = ({eventData, center, zoom, type}) => {
   const [locationInfo, setLocationInfo] = useState(null)
   // console.log('eventData', eventData)
   
@@ -14,6 +14,7 @@ const Map = ({eventData, center, zoom}) => {
         lng={ev.geometries[0].coordinates[0]}
         id={ev.categories[0].id}
         onClick={()=> setLocationInfo({id:ev.id, title:ev.title, type:ev.categories[0].title})}
+        type={type}
       />
     }
     else if(ev.categories[0].id === 10) {
@@ -22,6 +23,7 @@ const Map = ({eventData, center, zoom}) => {
         lng={ev.geometries[0].coordinates[0]}
         id={ev.categories[0].id}
         onClick={()=> setLocationInfo({id:ev.id, title:ev.title, type:ev.categories[0].title})}
+        type={type}
       />
     }
     else if(ev.categories[0].id === 15) {
@@ -30,6 +32,7 @@ const Map = ({eventData, center, zoom}) => {
         lng={ev.geometries[0].coordinates[0]}
         id={ev.categories[0].id}
         onClick={()=> setLocationInfo({id:ev.id, title:ev.title, type:ev.categories[0].title})}
+        type={type}
       />
     }
   })

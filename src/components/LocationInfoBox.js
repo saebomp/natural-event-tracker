@@ -1,7 +1,7 @@
-import {useState} from 'react'
+import React from 'react'
 
 const LocationInfoBox = ({info, closeBox}) => {
-  console.log('innffffoooo', info)
+  // console.log('innffffoooo', info)
   const handleChange = (event) => {
     closeBox(event)
   }

@@ -99,6 +99,17 @@ body {
   margin: 0;
   cursor: pointer;
 }
-.gm-style button {
+button.gm-fullscreen-control {
   top:50px !important
+}
+.selectBox {
+  position: absolute;
+  top:60px;
+  left:15px;
+  background-color: #f5f5f5;
+  width: 200px;
+  height: 200px;
+  z-index: 999;
+  border-radius: 10px;
+  padding:20px;
 }

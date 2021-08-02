@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import Map from './components/Maps'
 import Header from './components/Header'
+import Select from './components/Select'
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import { makeStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,10 +18,12 @@ const useStyles = makeStyles((theme) => ({
 
 
 function App() {
+  const classes = useStyles();
+
   const [eventData, setEventData] = useState([])
   const [loading, setLoading] = useState(false)
-
-  const classes = useStyles();
+  const [type, setType] = useState('all')
+  // console.log(type)
 
   useEffect(()=> {
     const fetchEvents = async () => {
@@ -34,10 +37,17 @@ function App() {
     fetchEvents()
     // console.log(eventData)
   }, []) //dependency array
+
+  const changeType =(ex) => {
+    setType(ex)
+  }
   return (
     <div>
       <Header />
-      {!loading ? <Map eventData={eventData} /> : 
+      {!loading ? <Select type={type} changeType={changeType} /> :
+      null
+      }
+      {!loading ? <Map eventData={eventData} type={type} /> : 
       <h1>
         <div className={classes.root}>
           <CircularProgress color="secondary"  />
@@ -59,3 +69,7 @@ export default App;
 // https://www.youtube.com/watch?v=ontX4zfVqK8
 // https://css-tricks.com/how-to-create-a-notebook-design-with-css/
 // https://stackoverflow.com/questions/48699820/how-do-i-hide-api-key-in-create-react-app
+
+
+
+// LocationMarker 에서 type받아서 해당 아이콘만 보여주는거
