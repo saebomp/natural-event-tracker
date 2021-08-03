@@ -72,4 +72,5 @@ export default App;
 
 
 
-// LocationMarker 에서 type받아서 해당 아이콘만 보여주는거
+// type에 wildfire 갯수 보여주기
+// storm 클릭했을때 lat lng 바뀌어서 거기로 자동 이동 되게
