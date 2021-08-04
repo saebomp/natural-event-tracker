@@ -19,6 +19,7 @@ body {
   padding: 0;
   margin: 0;
   text-align: center;
+  font-weight: 100;
 }
 .map {
   width: 100vw;
@@ -112,4 +113,8 @@ button.gm-fullscreen-control {
   z-index: 999;
   border-radius: 10px;
   padding:15px;
+}
+.selectBox .count {
+  width:30px;
+  text-align: center;
 }
