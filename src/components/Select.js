@@ -27,24 +27,23 @@ const labels = [
   {label: "Storms", count:400}
 ]
 
-const Select = ({type, changeType}) => {
+const Select = ({type, changeType, eventId}) => {
   const classes = useStyles();
-  // const [value, setValue] = useState(type);
-  // console.log('valueeeee',value)
 
   const handleChange = (event) => {
     changeType(event.target.value);
   };
 
+  console.log('eventId', eventId)
   return (
     <div className="selectBox">
       <FormControl component="fieldset">
       <FormLabel component="legend" className={classes.formControl}>Type</FormLabel>
       <RadioGroup aria-label="type" className={classes.labelWrap} name="type" value={type} onChange={handleChange}>
-        <FormControlLabel value="all" control={<Radio />} label={labels[0].label} className={classes.label} /> <span className="count">{labels[0].count}</span>
-        <FormControlLabel value="wildfires" control={<Radio />} label={labels[1].label} className={classes.label} /> <span className="count">{labels[1].count}</span>
-        <FormControlLabel value="ice" control={<Radio />} label={labels[2].label} className={classes.label} /> <span className="count">{labels[2].count}</span>
-        <FormControlLabel value="storms" control={<Radio />} label={labels[3].label} className={classes.label} /> <span className="count">{labels[3].count}</span>
+        <FormControlLabel value="all" control={<Radio />} label={labels[0].label} className={classes.label} /> <span className="count">{eventId.filter(list => list.id === 8).length + eventId.filter(list => list.id === 10).length + eventId.filter(list => list.id === 15).length}</span>
+        <FormControlLabel value="wildfires" control={<Radio />} label={labels[1].label} className={classes.label} /> <span className="count">{eventId.filter(list => list.id === 8).length}</span>
+        <FormControlLabel value="ice" control={<Radio />} label={labels[2].label} className={classes.label} /> <span className="count">{eventId.filter(list => list.id === 15).length}</span>
+        <FormControlLabel value="storms" control={<Radio />} label={labels[3].label} className={classes.label} /> <span className="count">{eventId.filter(list => list.id === 10).length}</span>
       </RadioGroup>
     </FormControl>
     </div>
