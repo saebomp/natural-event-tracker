@@ -23,7 +23,6 @@ function App() {
   const [eventData, setEventData] = useState([])
   const [loading, setLoading] = useState(false)
   const [type, setType] = useState('all')
-  const [eventId, setEventId] = useState({})
 
   useEffect(()=> {
     const fetchEvents = async () => {
@@ -34,11 +33,6 @@ function App() {
       setEventData(events)
       setLoading(false) //fetch 끝나면 loading 을 false로 만듬
 
-      const countId = eventData.map((list) => 
-       list.categories[0]
-      )
-      setEventId(countId)
-      console.log(eventId)
     }
     fetchEvents()
   }, []) //dependency array
@@ -50,9 +44,9 @@ function App() {
   return (
     <div>
       <Header />
-      {!loading ? <Select type={type} changeType={changeType} eventId={eventId} /> :
+      {!loading ? <Select type={type} changeType={changeType} eventData={eventData} /> :
       null
-      }
+      } 
       {!loading ? <Map eventData={eventData} type={type} /> : 
       <h1>
         <div className={classes.root}>
