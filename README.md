@@ -9,7 +9,7 @@ npm start
 ## Status
 Project is in progress
 ## What I Learned
-How to protect my API keys on Github
+Created env file to hide my API keys on Github
 ## Inspiration
 https://www.youtube.com/watch?v=ontX4zfVqK8<br />
 https://css-tricks.com/how-to-create-a-notebook-design-with-css/<br />
