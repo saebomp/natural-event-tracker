@@ -4,7 +4,17 @@ import LocationMarker from './LocationMarker'
 import LocationInfoBox from './LocationInfoBox'
 
 const Map = ({eventData, center, zoom, type}) => {
+
+  const defaultProps = {
+    center:{
+      lat:49.246292,
+      lng:-123.116226
+    },
+    zoom:6
+  }
+
   const [locationInfo, setLocationInfo] = useState(null)
+  const [geometries, setGeometries] = useState(defaultProps)
   // console.log('type', type)
   
   const markers = eventData.map(ev => {
@@ -47,8 +57,8 @@ const Map = ({eventData, center, zoom, type}) => {
     <div className="map">
       <GoogleMapReact
         bootstrapURLKeys={{key:`${API_KEY}`}}
-        defaultCenter={center}
-        defaultZoom={zoom}
+        defaultCenter={geometries.center}
+        defaultZoom={geometries.zoom}
       >
         {markers}
       </GoogleMapReact>
@@ -58,13 +68,6 @@ const Map = ({eventData, center, zoom, type}) => {
   )
 }
 
-Map.defaultProps = {
-  center:{
-    lat:49.246292,
-    lng:-123.116226
-  },
-  zoom:6
-}
 export default Map
 
 // https://stackoverflow.com/questions/55028583/how-do-i-call-setstate-from-another-component-in-reactjs
