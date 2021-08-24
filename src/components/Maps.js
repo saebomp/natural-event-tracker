@@ -52,7 +52,7 @@ const Map = ({eventData, center, zoom, type}) => {
   //LocationInfoBox에서 closeBox 펑션을 받아와서 locationInfo값을 null만듦 
   
   const API_KEY = process.env.REACT_APP_GOOGLEMAPS_API_KEY;
-
+  
   return (
     <div className="map">
       <GoogleMapReact
